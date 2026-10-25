@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello World</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #f5f1eb, #e5d2bd);
+      color: #29241f;
+      padding: 20px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 650px;
+      padding: 60px 35px;
+      text-align: center;
+      background: white;
+      border-radius: 25px;
+      box-shadow: 0 20px 60px #00000012;
+    }
+
+    .icon {
+      width: 70px;
+      height: 70px;
+      margin: 0 auto 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: #e5d2bd;
+      font-size: 30px;
+    }
+
+    h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(38px, 7vw, 55px);
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: #777;
+      font-size: 17px;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    button {
+      padding: 14px 28px;
+      border: none;
+      border-radius: 30px;
+      background: #29241f;
+      color: white;
+      font-size: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #8b6548;
+      transform: translateY(-3px);
+    }
+
+    #message {
+      display: none;
+      margin-top: 30px;
+      padding: 25px;
+      background: #f8f4ef;
+      border-radius: 15px;
+      animation: appear 0.5s ease;
+    }
+
+    #message h2 {
+      font-family: Georgia, serif;
+      margin-bottom: 10px;
+    }
+
+    #message p {
+      margin-bottom: 0;
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <div class="icon">✦</div>
+
+    <h1>Hello World!</h1>
+
+    <p>
+      Welcome to my first website.
+      Simple, clean and ready to explore.
+    </p>
+
+    <button onclick="showMessage()">Explore →</button>
+
+    <div id="message">
+      <h2>Hello, World! 👋</h2>
+      <p>
+        You did it! Your button works perfectly.
+        Welcome to the wonderful world of web development.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function showMessage() {
+      const message = document.getElementById("message");
+
+      message.style.display = "block";
+      message.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest"
+      });
+    }
+  </script>
+
+</body>
+</html>
